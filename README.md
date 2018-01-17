@@ -1,5 +1,5 @@
 # VGAPassthrough
-Scripts and Configs about VGAPassthrough with an Intel HD 4600 and a GTX 960
+Scripts and Configs about VGAPassthrough with an Intel HD 4600 and a GTX 960 (PRIME Enabled)
 
 Sources:
 https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF
