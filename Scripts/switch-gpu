@@ -1,0 +1,8 @@
+#!/bin/bash
+X11="/etc/X11"
+
+if [ -f /etc/X11/xorg.conf-nvidia ];then echo "Cambiando a Nvidia"
+sudo sh -c "mv $X11/xorg.conf $X11/xorg.conf-intel;mv $X11/xorg.conf-nvidia $X11/xorg.conf;eselect opengl set nvidia; echo 1 > /sys/bus/pci/devices/0000:01:00.0/remove;echo 1 > /sys/bus/pci/devices/0000:01:00.1/remove;echo 1 > /sys/bus/pci/rescan"
+else echo "Cambiando a intel"
+sudo sh -c "mv $X11/xorg.conf $X11/xorg.conf-nvidia;mv $X11/xorg.conf-intel $X11/xorg.conf;eselect opengl set xorg-x11;"
+fi

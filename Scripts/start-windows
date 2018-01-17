@@ -1,0 +1,1 @@
+sudo sh -c "vfio-bind 0000:01:00.0 0000:01:00.1;rc-service libvirtd start;virsh start win8.1"
